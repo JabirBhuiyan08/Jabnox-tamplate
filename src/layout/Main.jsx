@@ -5,7 +5,7 @@ import Footer from '../footer/Footer';
 
 const Main = () => {
     return (
-        <div className='w-full bg-black text-white'>
+        <div className='w-full bg-slate-50 text-slate-900 font-sans antialiased'>
             {/* <Navbar></Navbar> */}
             <div className='container mx-auto min-h-screen'>
             <Outlet></Outlet>
