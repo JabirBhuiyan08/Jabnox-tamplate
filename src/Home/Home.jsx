@@ -5,6 +5,7 @@ import img3 from '../assets/3.1.png';
 import pdf1 from '../assets/1.pdf';
 import pdf2 from '../assets/2.pdf';
 import pdf3 from '../assets/3.pdf';
+import jabnox from '../assets/jabnox.jpg';
 
 const Home = () => {
   const assets = [
@@ -14,7 +15,8 @@ const Home = () => {
       image: img1, 
       pdf: pdf1,
       category: 'Reports',
-      date: 'Jan 15, 2026'
+      date: 'Jan 15, 2026',
+      color: 'from-blue-500/20 to-cyan-500/20'
     },
     { 
       name: 'Product Documentation', 
@@ -22,7 +24,8 @@ const Home = () => {
       image: img2, 
       pdf: pdf2,
       category: 'Guides',
-      date: 'Feb 3, 2026'
+      date: 'Feb 3, 2026',
+      color: 'from-purple-500/20 to-pink-500/20'
     },
     { 
       name: 'Technical Specifications', 
@@ -30,113 +33,222 @@ const Home = () => {
       image: img3, 
       pdf: pdf3,
       category: 'Tech Docs',
-      date: 'Mar 12, 2026'
+      date: 'Mar 12, 2026',
+      color: 'from-emerald-500/20 to-teal-500/20'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans antialiased">
-      {/* Hero Header */}
-      <header className="relative bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] px-4 sm:px-10 py-16 sm:py-20 text-center overflow-hidden isolate">
-        <div className="relative z-10 max-w-3xl mx-auto">
-          <span className="inline-block bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full text-slate-400 text-sm font-medium tracking-wide border border-white/5 mb-6">
-            📚 Knowledge Base
-          </span>
-          <h1 className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent mb-4">
-            Document Library
-          </h1>
-          <p className="text-lg sm:text-xl text-slate-400 mb-8 max-w-xl mx-auto">
-            Access and view our collection of important documents
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 justify-center text-slate-300 text-sm">
-            <span className="px-5 py-2 bg-white/5 rounded-lg border border-white/5">📄 3 Documents</span>
-            <span className="px-5 py-2 bg-white/5 rounded-lg border border-white/5">📁 61.2 MB Total</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 font-sans antialiased">
+      {/* Modern Hero Section */}
+      <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28 overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-0 -left-4 w-56 sm:w-72 h-56 sm:h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+          <div className="absolute top-0 -right-4 w-56 sm:w-72 h-56 sm:h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-20 w-56 sm:w-72 h-56 sm:h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
+            {/* Left Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/70 backdrop-blur-sm rounded-full text-xs sm:text-sm font-medium text-slate-700 border border-white/50 shadow-sm mb-4 sm:mb-6">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Knowledge Base • Updated Daily
+              </div>
+              
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-3 sm:mb-4">
+                Document
+                <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  Library
+                </span>
+              </h1>
+              
+              <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-lg mx-auto lg:mx-0 mb-6 sm:mb-8">
+                Access, view, and manage your important documents all in one place
+              </p>
+
+              <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
+                <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-white/50 shadow-sm">
+                  <span className="text-xl sm:text-2xl">📄</span>
+                  <span className="text-xs sm:text-sm font-medium text-slate-700">3 Documents</span>
+                </div>
+                <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-white/50 shadow-sm">
+                  <span className="text-xl sm:text-2xl">📁</span>
+                  <span className="text-xs sm:text-sm font-medium text-slate-700">61.2 MB Total</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Logo */}
+            <div className="flex-shrink-0">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                <div className="relative bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-2xl shadow-xl border border-white/50">
+                  <img 
+                    src={jabnox} 
+                    alt="Jabnox" 
+                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Floating Decorations */}
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <div className="absolute w-64 h-64 sm:w-[300px] sm:h-[300px] bg-blue-400/10 rounded-full -top-20 -right-10 animate-[float_20s_ease-in-out_infinite]"></div>
-          <div className="absolute w-40 h-40 sm:w-48 sm:h-48 bg-purple-400/10 rounded-full -bottom-10 -left-10 animate-[float_25s_ease-in-out_infinite_reverse]"></div>
-          <div className="absolute w-32 h-32 sm:w-36 sm:h-36 bg-emerald-400/10 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[float_15s_ease-in-out_infinite]"></div>
+      {/* Documents Grid */}
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
+        {/* Section Header */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 sm:mb-8 lg:mb-12">
+          <div>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900">
+              Recent Documents
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 mt-1">Browse through our curated collection</p>
+          </div>
+          <button className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all duration-200 shadow-sm whitespace-nowrap">
+            <span>View All</span>
+            <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
-      </header>
 
-      {/* Assets Grid */}
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        {/* Grid Header */}
-    
-
-        {/* Assets Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Grid Cards - Responsive */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {assets.map((asset, index) => (
             <div 
               key={index} 
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-black/5"
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
-              {/* Image */}
-              <div className="relative overflow-hidden aspect-video bg-slate-100">
+              {/* Gradient Overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${asset.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
+
+              {/* Image Container */}
+              <div className="relative overflow-hidden aspect-[4/3] bg-slate-100">
                 <img 
                   src={asset.image} 
                   alt={asset.name} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute top-4 left-4">
-                  <span className="inline-block bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs font-semibold uppercase tracking-wide">
+                
+                {/* Category Badge */}
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
+                  <span className="inline-block px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/90 backdrop-blur-sm rounded-lg text-[10px] sm:text-xs font-semibold text-slate-700 shadow-sm border border-white/50">
                     {asset.category}
                   </span>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-5 sm:p-6">
-                <div className="flex justify-between items-start gap-2 mb-3">
-                  <h3 className="text-base sm:text-lg font-semibold text-slate-900 flex-1">
-                    {asset.name}
-                  </h3>
-                  <span className="inline-block bg-red-50 text-red-800 px-2.5 py-0.5 rounded text-xs font-bold uppercase flex-shrink-0">
+                {/* PDF Badge */}
+                <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
+                  <span className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 sm:py-1.5 bg-red-500 text-white rounded-lg text-[10px] sm:text-xs font-bold shadow-lg">
+                    <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z"/>
+                    </svg>
                     PDF
                   </span>
                 </div>
 
-                <div className="flex flex-wrap gap-3 sm:gap-4 mb-4">
-                  <span className="text-sm text-slate-500">📄 {asset.size}</span>
-                  <span className="text-sm text-slate-500">📅 {asset.date}</span>
+                {/* Jabnox Logo - Always Visible */}
+                <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4">
+                  <div className="bg-white/95 backdrop-blur-sm p-1.5 sm:p-2 rounded-lg shadow-lg border border-white/50 hover:scale-110 transition-transform duration-300">
+                    <img 
+                      src={jabnox} 
+                      alt="Jabnox" 
+                      className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="relative p-4 sm:p-5">
+                <h3 className="text-sm sm:text-base font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-1">
+                  {asset.name}
+                </h3>
+                
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 text-xs sm:text-sm text-slate-500 mb-3 sm:mb-4">
+                  <span className="flex items-center gap-1">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                    {asset.size}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    {asset.date}
+                  </span>
                 </div>
 
                 <a 
                   href={asset.pdf} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white rounded-xl font-medium text-sm hover:bg-[#0f3460] transition-all duration-300 hover:translate-x-1 group/btn"
+                  className="inline-flex items-center justify-center w-full gap-2 px-3 sm:px-4 py-2 sm:py-2.5 bg-slate-900 text-white rounded-xl font-medium text-xs sm:text-sm hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
                 >
-                  <span>View PDF</span>
+                  <span>View Document</span>
                   <svg 
-                    className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-rotate-45" 
+                    className="w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-1" 
                     viewBox="0 0 24 24" 
                     fill="none" 
                     stroke="currentColor" 
                     strokeWidth="2"
                   >
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <path d="M15 3h6v6" />
-                    <path d="M10 14L21 3" />
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </a>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Footer Stats - Responsive */}
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-200/60">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-slate-500">
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              Last updated: Today
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+              All documents verified
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+              Secure access
+            </span>
+          </div>
+        </div>
       </main>
 
-
-
-      {/* Add custom animation keyframes */}
+      {/* Animation Keyframes */}
       <style>{`
-        @keyframes float {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          33% { transform: translate(30px, -30px) scale(1.1); }
+        @keyframes blob {
+          0%, 100% { transform: translate(0px, 0px) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
           66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+        .line-clamp-1 {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       `}</style>
     </div>
